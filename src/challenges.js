@@ -17,6 +17,10 @@ function splitSentence (frase) {
 
 // Desafio 3 - Crie a função concatName
 
+function concatName (nomes) {
+  return (nomes[nomes.length -1]) + ', ' + nomes[0]
+}
+
 // Desafio 4 - Crie a função footballPoints
 
 function footballPoints (wins, ties) {
