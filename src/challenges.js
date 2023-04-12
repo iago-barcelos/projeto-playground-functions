@@ -139,6 +139,34 @@ function avaliaDivisao (numero){
 
 // Desafio 9 - Crie a função encode e a função decode
 
+function encode(frase) {
+  const vogais = { a: "1", e: "2", i: "3", o: "4", u: "5" };
+  
+  let novaFrase = "";
+  
+  for (let letra of frase) {
+    if (letra.toLowerCase() in vogais) {
+      novaFrase += vogais[letra.toLowerCase()];
+    } else {
+      novaFrase += letra;
+    }
+  }
+  return novaFrase;
+}
+
+function decode(fraseCodificada) {
+  const vogais = { "1": "a", "2": "e", "3": "i", "4": "o", "5": "u" };
+  let novaFrase = "";
+  for (let letra of fraseCodificada) {
+    if (letra in vogais) {
+      novaFrase += vogais[letra];
+    } else {
+      novaFrase += letra;
+    }
+  }
+  return novaFrase;
+}
+
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
